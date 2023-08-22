@@ -1,20 +1,29 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    const pokeApiUrl="https://pokeapi.co/api/v2/pokemon/ditto"
+const pokApi= "https://pokeapi.co/api/v2/pokemon"
 
-    fetch(pokeApiUrl)
-    .then(response=>response.json())
-    .then(data=>{
-        const pokId=data.id 
-        const pokName=data.name 
-        const pokUrl =data.sprites.front_default
-
-        document.getElementById("pokId").textContent=pokId
-        document.getElementById('pokName').textContent=pokName
-        document.getElementById('pokUrl').textContent='Click to open'
-        document.getElementById('pokUrl').href=pokUrl
-        document.getElementById('pokImg').src=pokemonUrl
-    
-        )
-    })
+async function fetchPokemonData(){
+    try{
+        const response =await fetch(pokApi)
+        const data =await response.json()
+        const pokemonList=data.results
+        console.log(pokemonList)
+        const pok=document.getElementById('tabs')
+        for (let i=0;i<=pokemonList.length;i++)
+        {
+            const tr=document.createElement('tr')
+            console.log(pokemonList[i].name)
+            const td="<td>"+pokemonList[i].name +"</td>"
+            
+            tr.innerHTML=td
+            pok.appendChild(tr)
+        }
+            
+       
+    }
+    catch(e){
+        console.log('THis is error',e)
+    }
 }
-)
+    
+    fetchPokemonData()
+
+    
