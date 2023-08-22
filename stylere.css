@@ -1,0 +1,42 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchPok{
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 20px;
+    height: 50px;
+
+}
+#btn{
+    font-size: 16px;
+    height:50px;
+    border-radius: 4px;
+
+}
+
+.search-area{
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+#tabs{
+    border-collapse: collapse;
+    text-align: center;
+}
+#tabs th{
+    padding: 15px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    font-size: 20px;
+}
+#tabs td{
+    padding: 15px;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    
+}
+
