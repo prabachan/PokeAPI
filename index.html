@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<div class="fields">
+    <input type="text" onkeyup="search()" placeholder="Search a Pokemon" id="searchPoke">
+<div class="dropdown">
+    <button class="dropbtn">Sort</button>
+    <div class="dropdown-content">
+        <a href="#" onclick="sortAsc()">"Name"</a>
+        <a href="#" onclick="sortDec()">"Name"</a>
+        <a href="#" onclick="sortAscId()">"ID"</a>
+        <a href="#" onclick="sortDecID()">"ID"</a>
+
+    </div>
+
+</div>
+</div>
+
+    <div class="container">
+        <table class="thead">
+            <th> ID</th>
+            <th> Image</th>
+            <th> Name</th>
+            <th>URL</th>
+        </table>
+
+
+    </div>
+    
+</body>
+</html>
